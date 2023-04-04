@@ -7,6 +7,7 @@ final class PayDetailViewController: UIViewController {
 		super.init(nibName: nil, bundle: nil)
 		initViews()
 		bind()
+		setupSearchBarController()
 	}
 	required init?(coder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
@@ -89,6 +90,12 @@ final class PayDetailViewController: UIViewController {
 
 	private let ordererInfoLabel: UILabel = {
 		let label: UILabel = .init()
+		label.set(
+			text: "주문자 정보",
+			font: .systemFont(ofSize: 18, weight: .medium),
+			textColor: .black
+		)
+		label.textAlignment = .left
 		return label
 	}()
 
@@ -118,16 +125,40 @@ final class PayDetailViewController: UIViewController {
 
 	private let ordererPhoneNumberTextField: CustomTextField = .init()
 
+	private lazy var confirmButtonWidgetView: ButtonWidgetView = {
+		let widgetView: ButtonWidgetView = .init()
+		widgetView.roundCorners(16)
+		widgetView.backgroundColor = .black
+
+		let payInfoLabel: UILabel = .init()
+		payInfoLabel.set(
+			text: "총 \(viewModel.totalCount)개 \(viewModel.totalPrice)원",
+			font: .systemFont(ofSize: 18, weight: .medium),
+			textColor: .cyan
+		)
+
+		let titleLabel: UILabel = .init()
+		titleLabel.set(
+			text: "구매하기",
+			font: .systemFont(ofSize: 20, weight: .bold),
+			textColor: .white
+		)
+		widgetView.setupViews([payInfoLabel, titleLabel])
+		return widgetView
+	}()
+
 	private func initViews() {
+		view.backgroundColor = .white
+
 		view.addSubview(deliveryInfoLabel)
 		deliveryInfoLabel.snp.makeConstraints { make in
-			make.top.equalTo(view.safeAreaLayoutGuide).offset(40)
+			make.top.equalTo(view.safeAreaLayoutGuide).offset(12)
 			make.horizontalEdges.equalToSuperview().inset(16)
 		}
 
 		view.addSubview(receiverTitleLabel)
 		receiverTitleLabel.snp.makeConstraints { make in
-			make.width.equalTo(42)
+			make.width.equalTo(60)
 			make.top.equalTo(deliveryInfoLabel.snp.bottom).offset(16)
 			make.leading.equalToSuperview().offset(16)
 		}
@@ -141,8 +172,8 @@ final class PayDetailViewController: UIViewController {
 
 		view.addSubview(receiverPhoneNumberTitleLabel)
 		receiverPhoneNumberTitleLabel.snp.makeConstraints { make in
-			make.width.equalTo(42)
-			make.top.equalTo(receiverTitleLabel.snp.bottom).offset(16)
+			make.width.equalTo(60)
+			make.top.equalTo(receiverTextField.snp.bottom).offset(16)
 			make.leading.equalToSuperview().offset(16)
 		}
 
@@ -155,13 +186,14 @@ final class PayDetailViewController: UIViewController {
 
 		view.addSubview(locationTitleLabel)
 		locationTitleLabel.snp.makeConstraints { make in
-			make.width.equalTo(42)
+			make.width.equalTo(60)
 			make.top.equalTo(receiverPhoneNumberTitleLabel.snp.bottom).offset(16)
 			make.leading.equalToSuperview().offset(16)
 		}
 
 		view.addSubview(locationContentLabel)
 		locationContentLabel.snp.makeConstraints { make in
+			make.height.equalTo(36)
 			make.centerY.equalTo(locationTitleLabel.snp.centerY)
 			make.leading.equalTo(locationTitleLabel.snp.trailing).offset(16)
 			make.trailing.equalToSuperview().offset(-16)
@@ -169,8 +201,8 @@ final class PayDetailViewController: UIViewController {
 
 		view.addSubview(requestLabel)
 		requestLabel.snp.makeConstraints { make in
-			make.width.equalTo(42)
-			make.top.equalTo(locationTitleLabel.snp.bottom).offset(16)
+			make.width.equalTo(60)
+			make.top.equalTo(locationContentLabel.snp.bottom).offset(16)
 			make.leading.equalToSuperview().offset(16)
 		}
 
@@ -183,13 +215,13 @@ final class PayDetailViewController: UIViewController {
 
 		view.addSubview(ordererInfoLabel)
 		ordererInfoLabel.snp.makeConstraints { make in
-			make.top.equalTo(requestLabel.snp.bottom).offset(48)
+			make.top.equalTo(requestTextField.snp.bottom).offset(48)
 			make.horizontalEdges.equalToSuperview().inset(16)
 		}
 
 		view.addSubview(ordererNameLabel)
 		ordererNameLabel.snp.makeConstraints { make in
-			make.width.equalTo(42)
+			make.width.equalTo(60)
 			make.top.equalTo(ordererInfoLabel.snp.bottom).offset(16)
 			make.leading.equalToSuperview().offset(16)
 		}
@@ -203,8 +235,8 @@ final class PayDetailViewController: UIViewController {
 
 		view.addSubview(ordererPhoneNumberLabel)
 		ordererPhoneNumberLabel.snp.makeConstraints { make in
-			make.width.equalTo(42)
-			make.top.equalTo(ordererNameLabel.snp.bottom).offset(16)
+			make.width.equalTo(60)
+			make.top.equalTo(ordererNameTextField.snp.bottom).offset(16)
 			make.leading.equalToSuperview().offset(16)
 		}
 
@@ -213,6 +245,13 @@ final class PayDetailViewController: UIViewController {
 			make.centerY.equalTo(ordererPhoneNumberLabel.snp.centerY)
 			make.leading.equalTo(ordererPhoneNumberLabel.snp.trailing).offset(16)
 			make.trailing.equalToSuperview().offset(-16)
+		}
+
+		view.addSubview(confirmButtonWidgetView)
+		confirmButtonWidgetView.snp.makeConstraints { make in
+			make.height.equalTo(56)
+			make.horizontalEdges.equalToSuperview().inset(16)
+			make.bottom.equalTo(view.safeAreaLayoutGuide)
 		}
 	}
 

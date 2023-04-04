@@ -3,6 +3,7 @@ import Alamofire
 
 enum ProductNetworkAPI: NetworkAPI {
 	case getProducts(page: Int, size: Int)
+	case postOrder(customerID: Int)
 
 	var scheme: String {
 		return "http"
@@ -16,6 +17,8 @@ enum ProductNetworkAPI: NetworkAPI {
 		switch self {
 			case .getProducts:
 				return "api/products"
+			case .postOrder:
+				return "api/order"
 		}
 	}
 
@@ -23,6 +26,8 @@ enum ProductNetworkAPI: NetworkAPI {
 		switch self {
 			case .getProducts:
 				return .get
+			case .postOrder:
+				return .post
 		}
 	}
 
@@ -37,6 +42,8 @@ enum ProductNetworkAPI: NetworkAPI {
 					"page": page,
 					"size": size
 				]
+			default:
+				return [:]
 		}
 	}
 

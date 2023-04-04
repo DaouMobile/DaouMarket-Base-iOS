@@ -10,8 +10,8 @@ final class PayDetailViewModel {
 
 	private let dependency: ProductDependency
 
-	private let totalCount: Int
-	private let totalPrice: Int
+	let totalCount: Int
+	let totalPrice: Int
 
 	private var receiverName: String = ""
 	private var receiverPhoneNumber: String = ""

@@ -12,6 +12,9 @@ final class CustomTextField: UITextField {
 		leftViewMode = .always
 		leftView = .init(frame: .init(x: 0, y: 0, width: 16, height: 0))
 		self.placeholder = placeholder
+		snp.makeConstraints { make in
+			make.height.equalTo(36)
+		}
 	}
 	required init?(coder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
