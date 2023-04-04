@@ -202,7 +202,6 @@
 			children = (
 				EA3A190029DBFB6C00A185D3 /* ProductDetailViewController.swift */,
 				EA3A191029DC09DE00A185D3 /* ProductDetailBottomSheetViewController.swift */,
-				EA3C9B4529DBB24C00482733 /* Model */,
 			);
 			path = ProductDetail;
 			sourceTree = "<group>";
@@ -265,6 +264,7 @@
 		EA3C9B2929DBA83200482733 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				EA3C9B4529DBB24C00482733 /* Model */,
 				EA3A18C829DBB4CB00A185D3 /* Repository */,
 			);
 			path = Domain;
