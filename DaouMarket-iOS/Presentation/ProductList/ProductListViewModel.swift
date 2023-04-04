@@ -21,8 +21,8 @@ final class ProductListViewModel {
 			searchedTermSubject.eraseToAnyPublisher(),
 			productsSubject.eraseToAnyPublisher()
 		).map({ (searchedTerm, products) -> [Product] in
-			guard let searchedTerm else { return products }
-			return products.filter({ $0.name.contains(searchedTerm) })
+			guard let searchedTerm, !searchedTerm.isEmpty else { return products }
+			return products.filter({ $0.content.contains(searchedTerm) })
 		})
 		.eraseToAnyPublisher()
 	}
@@ -37,9 +37,7 @@ final class ProductListViewModel {
 				receiveCompletion: { (error) in
 					print(error)
 				},
-				receiveValue: { [weak self] (products) in
-					self?.productsSubject.send(products)
-				}
+				receiveValue: productsSubject.send(_:)
 			)
 			.store(in: &cancellables)
 	}

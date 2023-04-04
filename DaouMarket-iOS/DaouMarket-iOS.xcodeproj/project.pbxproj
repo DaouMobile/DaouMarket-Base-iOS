@@ -17,6 +17,17 @@
 		EA3A18DA29DBC10900A185D3 /* ProductListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3A18D929DBC10900A185D3 /* ProductListCoordinator.swift */; };
 		EA3A18DC29DBC13100A185D3 /* ProductListDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3A18DB29DBC13100A185D3 /* ProductListDependency.swift */; };
 		EA3A18DE29DBC16D00A185D3 /* PresentationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3A18DD29DBC16D00A185D3 /* PresentationAssembly.swift */; };
+		EA3A18E129DBE28D00A185D3 /* ProductListCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3A18E029DBE28D00A185D3 /* ProductListCollectionViewLayout.swift */; };
+		EA3A18E329DBE29A00A185D3 /* ProductListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3A18E229DBE29A00A185D3 /* ProductListCollectionViewCell.swift */; };
+		EA3A18E529DBE2EF00A185D3 /* ProductListKindsOfSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3A18E429DBE2EF00A185D3 /* ProductListKindsOfSection.swift */; };
+		EA3A18E929DBE55600A185D3 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3A18E829DBE55600A185D3 /* UIView+.swift */; };
+		EA3A18EB29DBE5C300A185D3 /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3A18EA29DBE5C300A185D3 /* UIStackView+.swift */; };
+		EA3A18EE29DBE62B00A185D3 /* SpacerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3A18ED29DBE62B00A185D3 /* SpacerView.swift */; };
+		EA3A18F029DBE66200A185D3 /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3A18EF29DBE66200A185D3 /* UILabel+.swift */; };
+		EA3A18F529DBE86500A185D3 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = EA3A18F429DBE86500A185D3 /* Kingfisher */; };
+		EA3A18F929DBE97900A185D3 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3A18F829DBE97900A185D3 /* UIImageView+.swift */; };
+		EA3A18FC29DBF4A900A185D3 /* SearchBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3A18FB29DBF4A900A185D3 /* SearchBarController.swift */; };
+		EA3A18FE29DBF94B00A185D3 /* Array+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3A18FD29DBF94B00A185D3 /* Array+.swift */; };
 		EA3C9B1529DBA79000482733 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C9B1429DBA79000482733 /* AppDelegate.swift */; };
 		EA3C9B1729DBA79000482733 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C9B1629DBA79000482733 /* SceneDelegate.swift */; };
 		EA3C9B1929DBA79000482733 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C9B1829DBA79000482733 /* ViewController.swift */; };
@@ -45,6 +56,16 @@
 		EA3A18D929DBC10900A185D3 /* ProductListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListCoordinator.swift; sourceTree = "<group>"; };
 		EA3A18DB29DBC13100A185D3 /* ProductListDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListDependency.swift; sourceTree = "<group>"; };
 		EA3A18DD29DBC16D00A185D3 /* PresentationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationAssembly.swift; sourceTree = "<group>"; };
+		EA3A18E029DBE28D00A185D3 /* ProductListCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListCollectionViewLayout.swift; sourceTree = "<group>"; };
+		EA3A18E229DBE29A00A185D3 /* ProductListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListCollectionViewCell.swift; sourceTree = "<group>"; };
+		EA3A18E429DBE2EF00A185D3 /* ProductListKindsOfSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListKindsOfSection.swift; sourceTree = "<group>"; };
+		EA3A18E829DBE55600A185D3 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		EA3A18EA29DBE5C300A185D3 /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
+		EA3A18ED29DBE62B00A185D3 /* SpacerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacerView.swift; sourceTree = "<group>"; };
+		EA3A18EF29DBE66200A185D3 /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
+		EA3A18F829DBE97900A185D3 /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
+		EA3A18FB29DBF4A900A185D3 /* SearchBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarController.swift; sourceTree = "<group>"; };
+		EA3A18FD29DBF94B00A185D3 /* Array+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
 		EA3C9B1129DBA79000482733 /* DaouMarket-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DaouMarket-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA3C9B1429DBA79000482733 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA3C9B1629DBA79000482733 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA3A18F529DBE86500A185D3 /* Kingfisher in Frameworks */,
 				EA3C9B2D29DBA88100482733 /* SnapKit in Frameworks */,
 				EA3C9B3029DBADDE00482733 /* Alamofire in Frameworks */,
 				EA3C9B3B29DBAFEC00482733 /* Swinject in Frameworks */,
@@ -95,6 +117,8 @@
 		EA3A18D029DBBB3500A185D3 /* ProductList */ = {
 			isa = PBXGroup;
 			children = (
+				EA3A18FA29DBF47A00A185D3 /* SearchBarController */,
+				EA3A18DF29DBE27200A185D3 /* CollectionView */,
 				EA3A18D129DBBB4500A185D3 /* ProductListViewController.swift */,
 				EA3A18D729DBC0FD00A185D3 /* ProductListViewModel.swift */,
 				EA3A18D929DBC10900A185D3 /* ProductListCoordinator.swift */,
@@ -103,9 +127,57 @@
 			path = ProductList;
 			sourceTree = "<group>";
 		};
+		EA3A18DF29DBE27200A185D3 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				EA3A18E029DBE28D00A185D3 /* ProductListCollectionViewLayout.swift */,
+				EA3A18E229DBE29A00A185D3 /* ProductListCollectionViewCell.swift */,
+				EA3A18E429DBE2EF00A185D3 /* ProductListKindsOfSection.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		EA3A18E629DBE52800A185D3 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				EA3A18EC29DBE61F00A185D3 /* UIComponents */,
+				EA3A18E729DBE53E00A185D3 /* Extension */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		EA3A18E729DBE53E00A185D3 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				EA3A18E829DBE55600A185D3 /* UIView+.swift */,
+				EA3A18EA29DBE5C300A185D3 /* UIStackView+.swift */,
+				EA3A18EF29DBE66200A185D3 /* UILabel+.swift */,
+				EA3A18F829DBE97900A185D3 /* UIImageView+.swift */,
+				EA3A18FD29DBF94B00A185D3 /* Array+.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		EA3A18EC29DBE61F00A185D3 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				EA3A18ED29DBE62B00A185D3 /* SpacerView.swift */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		EA3A18FA29DBF47A00A185D3 /* SearchBarController */ = {
+			isa = PBXGroup;
+			children = (
+				EA3A18FB29DBF4A900A185D3 /* SearchBarController.swift */,
+			);
+			path = SearchBarController;
+			sourceTree = "<group>";
+		};
 		EA3C9B0829DBA79000482733 = {
 			isa = PBXGroup;
 			children = (
+				EA3A18E629DBE52800A185D3 /* Common */,
 				EA3C9B3C29DBAFF000482733 /* DI */,
 				EA3C9B2A29DBA83500482733 /* Presentation */,
 				EA3C9B2929DBA83200482733 /* Domain */,
@@ -221,6 +293,7 @@
 				EA3C9B2C29DBA88100482733 /* SnapKit */,
 				EA3C9B2F29DBADDE00482733 /* Alamofire */,
 				EA3C9B3A29DBAFEC00482733 /* Swinject */,
+				EA3A18F429DBE86500A185D3 /* Kingfisher */,
 			);
 			productName = "DaouMarket-iOS";
 			productReference = EA3C9B1129DBA79000482733 /* DaouMarket-iOS.app */;
@@ -254,6 +327,7 @@
 				EA3C9B2B29DBA88100482733 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				EA3C9B2E29DBADDE00482733 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				EA3C9B3929DBAFEC00482733 /* XCRemoteSwiftPackageReference "Swinject" */,
+				EA3A18F329DBE86500A185D3 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = EA3C9B1229DBA79000482733 /* Products */;
 			projectDirPath = "";
@@ -288,19 +362,29 @@
 				EA3C9B1529DBA79000482733 /* AppDelegate.swift in Sources */,
 				EA3C9B1729DBA79000482733 /* SceneDelegate.swift in Sources */,
 				EA3A18CF29DBB5C000A185D3 /* ProductNetworkAPI.swift in Sources */,
+				EA3A18E529DBE2EF00A185D3 /* ProductListKindsOfSection.swift in Sources */,
+				EA3A18EB29DBE5C300A185D3 /* UIStackView+.swift in Sources */,
 				EA3C9B4029DBB03500482733 /* DataAssembly.swift in Sources */,
 				EA3C9B3E29DBB01700482733 /* DIContainer.swift in Sources */,
+				EA3A18FE29DBF94B00A185D3 /* Array+.swift in Sources */,
 				EA3A18DE29DBC16D00A185D3 /* PresentationAssembly.swift in Sources */,
+				EA3A18FC29DBF4A900A185D3 /* SearchBarController.swift in Sources */,
+				EA3A18EE29DBE62B00A185D3 /* SpacerView.swift in Sources */,
 				EA3A18DC29DBC13100A185D3 /* ProductListDependency.swift in Sources */,
 				EA3A18CA29DBB4F500A185D3 /* ProductRepository.swift in Sources */,
 				EA3C9B4729DBB25400482733 /* Product.swift in Sources */,
 				EA3C9B4229DBB12000482733 /* APIError.swift in Sources */,
+				EA3A18F929DBE97900A185D3 /* UIImageView+.swift in Sources */,
+				EA3A18F029DBE66200A185D3 /* UILabel+.swift in Sources */,
 				EA3C9B3229DBAE7200482733 /* NetworkAPI.swift in Sources */,
 				EA3A18D429DBBF0E00A185D3 /* DataLayerError.swift in Sources */,
 				EA3A18DA29DBC10900A185D3 /* ProductListCoordinator.swift in Sources */,
 				EA3A18CD29DBB58900A185D3 /* DefaultProductRepository.swift in Sources */,
 				EA3A18D829DBC0FD00A185D3 /* ProductListViewModel.swift in Sources */,
+				EA3A18E129DBE28D00A185D3 /* ProductListCollectionViewLayout.swift in Sources */,
+				EA3A18E329DBE29A00A185D3 /* ProductListCollectionViewCell.swift in Sources */,
 				EA3A18D629DBBF5700A185D3 /* RepositoryError.swift in Sources */,
+				EA3A18E929DBE55600A185D3 /* UIView+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,6 +606,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		EA3A18F329DBE86500A185D3 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 7.6.0;
+			};
+		};
 		EA3C9B2B29DBA88100482733 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -549,6 +641,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		EA3A18F429DBE86500A185D3 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA3A18F329DBE86500A185D3 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		EA3C9B2C29DBA88100482733 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = EA3C9B2B29DBA88100482733 /* XCRemoteSwiftPackageReference "SnapKit" */;

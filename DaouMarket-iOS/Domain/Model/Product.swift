@@ -1,6 +1,6 @@
 import Foundation
 
-struct Product: Decodable {
+struct Product: Decodable, Hashable {
 	let id: Int
 	let code: String
 	let brand: String
