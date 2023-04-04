@@ -13,6 +13,10 @@
 		EA3A18D229DBBB4500A185D3 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3A18D129DBBB4500A185D3 /* ProductListViewController.swift */; };
 		EA3A18D429DBBF0E00A185D3 /* DataLayerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3A18D329DBBF0E00A185D3 /* DataLayerError.swift */; };
 		EA3A18D629DBBF5700A185D3 /* RepositoryError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3A18D529DBBF5700A185D3 /* RepositoryError.swift */; };
+		EA3A18D829DBC0FD00A185D3 /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3A18D729DBC0FD00A185D3 /* ProductListViewModel.swift */; };
+		EA3A18DA29DBC10900A185D3 /* ProductListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3A18D929DBC10900A185D3 /* ProductListCoordinator.swift */; };
+		EA3A18DC29DBC13100A185D3 /* ProductListDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3A18DB29DBC13100A185D3 /* ProductListDependency.swift */; };
+		EA3A18DE29DBC16D00A185D3 /* PresentationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3A18DD29DBC16D00A185D3 /* PresentationAssembly.swift */; };
 		EA3C9B1529DBA79000482733 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C9B1429DBA79000482733 /* AppDelegate.swift */; };
 		EA3C9B1729DBA79000482733 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C9B1629DBA79000482733 /* SceneDelegate.swift */; };
 		EA3C9B1929DBA79000482733 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C9B1829DBA79000482733 /* ViewController.swift */; };
@@ -37,6 +41,10 @@
 		EA3A18D129DBBB4500A185D3 /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
 		EA3A18D329DBBF0E00A185D3 /* DataLayerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLayerError.swift; sourceTree = "<group>"; };
 		EA3A18D529DBBF5700A185D3 /* RepositoryError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryError.swift; sourceTree = "<group>"; };
+		EA3A18D729DBC0FD00A185D3 /* ProductListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
+		EA3A18D929DBC10900A185D3 /* ProductListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListCoordinator.swift; sourceTree = "<group>"; };
+		EA3A18DB29DBC13100A185D3 /* ProductListDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListDependency.swift; sourceTree = "<group>"; };
+		EA3A18DD29DBC16D00A185D3 /* PresentationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationAssembly.swift; sourceTree = "<group>"; };
 		EA3C9B1129DBA79000482733 /* DaouMarket-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DaouMarket-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA3C9B1429DBA79000482733 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA3C9B1629DBA79000482733 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +96,9 @@
 			isa = PBXGroup;
 			children = (
 				EA3A18D129DBBB4500A185D3 /* ProductListViewController.swift */,
+				EA3A18D729DBC0FD00A185D3 /* ProductListViewModel.swift */,
+				EA3A18D929DBC10900A185D3 /* ProductListCoordinator.swift */,
+				EA3A18DB29DBC13100A185D3 /* ProductListDependency.swift */,
 			);
 			path = ProductList;
 			sourceTree = "<group>";
@@ -151,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				EA3A18D029DBBB3500A185D3 /* ProductList */,
+				EA3A18DD29DBC16D00A185D3 /* PresentationAssembly.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -278,12 +290,16 @@
 				EA3A18CF29DBB5C000A185D3 /* ProductNetworkAPI.swift in Sources */,
 				EA3C9B4029DBB03500482733 /* DataAssembly.swift in Sources */,
 				EA3C9B3E29DBB01700482733 /* DIContainer.swift in Sources */,
+				EA3A18DE29DBC16D00A185D3 /* PresentationAssembly.swift in Sources */,
+				EA3A18DC29DBC13100A185D3 /* ProductListDependency.swift in Sources */,
 				EA3A18CA29DBB4F500A185D3 /* ProductRepository.swift in Sources */,
 				EA3C9B4729DBB25400482733 /* Product.swift in Sources */,
 				EA3C9B4229DBB12000482733 /* APIError.swift in Sources */,
 				EA3C9B3229DBAE7200482733 /* NetworkAPI.swift in Sources */,
 				EA3A18D429DBBF0E00A185D3 /* DataLayerError.swift in Sources */,
+				EA3A18DA29DBC10900A185D3 /* ProductListCoordinator.swift in Sources */,
 				EA3A18CD29DBB58900A185D3 /* DefaultProductRepository.swift in Sources */,
+				EA3A18D829DBC0FD00A185D3 /* ProductListViewModel.swift in Sources */,
 				EA3A18D629DBBF5700A185D3 /* RepositoryError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
