@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA3A18CA29DBB4F500A185D3 /* ProductRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3A18C929DBB4F500A185D3 /* ProductRepository.swift */; };
+		EA3A18CD29DBB58900A185D3 /* DefaultProductRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3A18CC29DBB58900A185D3 /* DefaultProductRepository.swift */; };
+		EA3A18CF29DBB5C000A185D3 /* ProductNetworkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3A18CE29DBB5C000A185D3 /* ProductNetworkAPI.swift */; };
 		EA3C9B1529DBA79000482733 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C9B1429DBA79000482733 /* AppDelegate.swift */; };
 		EA3C9B1729DBA79000482733 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C9B1629DBA79000482733 /* SceneDelegate.swift */; };
 		EA3C9B1929DBA79000482733 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C9B1829DBA79000482733 /* ViewController.swift */; };
@@ -16,7 +19,6 @@
 		EA3C9B2D29DBA88100482733 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = EA3C9B2C29DBA88100482733 /* SnapKit */; };
 		EA3C9B3029DBADDE00482733 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = EA3C9B2F29DBADDE00482733 /* Alamofire */; };
 		EA3C9B3229DBAE7200482733 /* NetworkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C9B3129DBAE7200482733 /* NetworkAPI.swift */; };
-		EA3C9B3829DBAEF900482733 /* ProductResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C9B3729DBAEF900482733 /* ProductResponse.swift */; };
 		EA3C9B3B29DBAFEC00482733 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = EA3C9B3A29DBAFEC00482733 /* Swinject */; };
 		EA3C9B3E29DBB01700482733 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C9B3D29DBB01700482733 /* DIContainer.swift */; };
 		EA3C9B4029DBB03500482733 /* DataAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C9B3F29DBB03500482733 /* DataAssembly.swift */; };
@@ -26,6 +28,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EA3A18C929DBB4F500A185D3 /* ProductRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRepository.swift; sourceTree = "<group>"; };
+		EA3A18CC29DBB58900A185D3 /* DefaultProductRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultProductRepository.swift; sourceTree = "<group>"; };
+		EA3A18CE29DBB5C000A185D3 /* ProductNetworkAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductNetworkAPI.swift; sourceTree = "<group>"; };
 		EA3C9B1129DBA79000482733 /* DaouMarket-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DaouMarket-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA3C9B1429DBA79000482733 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA3C9B1629DBA79000482733 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,7 +40,6 @@
 		EA3C9B2029DBA79300482733 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA3C9B2229DBA79300482733 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA3C9B3129DBAE7200482733 /* NetworkAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPI.swift; sourceTree = "<group>"; };
-		EA3C9B3729DBAEF900482733 /* ProductResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductResponse.swift; sourceTree = "<group>"; };
 		EA3C9B3D29DBB01700482733 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		EA3C9B3F29DBB03500482733 /* DataAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAssembly.swift; sourceTree = "<group>"; };
 		EA3C9B4129DBB12000482733 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
@@ -57,6 +61,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA3A18C829DBB4CB00A185D3 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				EA3A18C929DBB4F500A185D3 /* ProductRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		EA3A18CB29DBB57C00A185D3 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				EA3A18CC29DBB58900A185D3 /* DefaultProductRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		EA3C9B0829DBA79000482733 = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +114,7 @@
 		EA3C9B2829DBA82900482733 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				EA3A18CB29DBB57C00A185D3 /* Repository */,
 				EA3C9B3429DBAE8B00482733 /* Model */,
 				EA3C9B3329DBAE8400482733 /* Remote */,
 				EA3C9B3F29DBB03500482733 /* DataAssembly.swift */,
@@ -104,6 +125,7 @@
 		EA3C9B2929DBA83200482733 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				EA3A18C829DBB4CB00A185D3 /* Repository */,
 				EA3C9B4529DBB24C00482733 /* Model */,
 			);
 			path = Domain;
@@ -121,6 +143,7 @@
 			children = (
 				EA3C9B3129DBAE7200482733 /* NetworkAPI.swift */,
 				EA3C9B4129DBB12000482733 /* APIError.swift */,
+				EA3A18CE29DBB5C000A185D3 /* ProductNetworkAPI.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -128,7 +151,6 @@
 		EA3C9B3429DBAE8B00482733 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				EA3C9B3729DBAEF900482733 /* ProductResponse.swift */,
 				EA3C9B4329DBB17B00482733 /* ProductPageResponse.swift */,
 			);
 			path = Model;
@@ -231,16 +253,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA3C9B3829DBAEF900482733 /* ProductResponse.swift in Sources */,
 				EA3C9B4429DBB17B00482733 /* ProductPageResponse.swift in Sources */,
 				EA3C9B1929DBA79000482733 /* ViewController.swift in Sources */,
 				EA3C9B1529DBA79000482733 /* AppDelegate.swift in Sources */,
 				EA3C9B1729DBA79000482733 /* SceneDelegate.swift in Sources */,
+				EA3A18CF29DBB5C000A185D3 /* ProductNetworkAPI.swift in Sources */,
 				EA3C9B4029DBB03500482733 /* DataAssembly.swift in Sources */,
 				EA3C9B3E29DBB01700482733 /* DIContainer.swift in Sources */,
+				EA3A18CA29DBB4F500A185D3 /* ProductRepository.swift in Sources */,
 				EA3C9B4729DBB25400482733 /* Product.swift in Sources */,
 				EA3C9B4229DBB12000482733 /* APIError.swift in Sources */,
 				EA3C9B3229DBAE7200482733 /* NetworkAPI.swift in Sources */,
+				EA3A18CD29DBB58900A185D3 /* DefaultProductRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +419,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -423,6 +448,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
