@@ -6,7 +6,7 @@ final class SearchBarController: UISearchController {
 		super.init(nibName: nil, bundle: nil)
 		searchResultsUpdater = self
 		searchBar.delegate = self
-		searchBar.placeholder = ""
+		searchBar.placeholder = "검색어를 입력해주세요."
 		hidesNavigationBarDuringPresentation = false
 	}
 	required init?(coder: NSCoder) {

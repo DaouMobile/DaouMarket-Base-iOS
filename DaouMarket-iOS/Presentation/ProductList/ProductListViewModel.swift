@@ -2,15 +2,12 @@ import UIKit
 import Combine
 
 final class ProductListViewModel {
-	init(coordinator: ProductListCoordinator, dependency: ProductListDependency) {
-		self.coordinator = coordinator
+	init(dependency: ProductDependency) {
 		self.dependency = dependency
-
 		bind()
 	}
 
-	private let coordinator: ProductListCoordinator
-	private let dependency: ProductListDependency
+	private let dependency: ProductDependency
 	private var cancellables: Set<AnyCancellable> = .init()
 
 	private let searchedTermSubject: CurrentValueSubject<String?, Never> = .init(nil)

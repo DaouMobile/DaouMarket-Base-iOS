@@ -16,3 +16,16 @@ extension UIView {
 		clipsToBounds = true
 	}
 }
+
+extension UIView {
+	func setBorder(width: CGFloat, color: UIColor) {
+		layer.borderWidth = width
+		layer.borderColor = color.cgColor
+	}
+}
+
+extension UIView {
+	func tapEventPublisher(_ type: GestureType = .tap()) -> GesturePublisher {
+		return .init(view: self, gestureType: type)
+	}
+}

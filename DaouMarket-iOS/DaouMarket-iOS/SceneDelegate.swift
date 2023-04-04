@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  DaouMarket-iOS
-//
-//  Created by gwonii on 2023/04/04.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -25,8 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		window = .init(windowScene: windowScene)
 		window?.makeKeyAndVisible()
 
-		let productListCoordinator: ProductListCoordinator = .init()
-		let productListViewModel = ProductListViewModel(coordinator: productListCoordinator, dependency: get())
+		let productListViewModel = ProductListViewModel(dependency: get())
 		let productListViewController = ProductListViewController(viewModel: productListViewModel)
 		let navigationController: UINavigationController = .init(rootViewController: productListViewController)
 		window?.rootViewController = navigationController

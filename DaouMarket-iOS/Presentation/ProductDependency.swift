@@ -1,8 +1,8 @@
-protocol ProductListDependency {
+protocol ProductDependency {
 	var productRepository: ProductRepository { get }
 }
 
-struct DefaultProductListDependency: ProductListDependency {
+struct DefaultProductDependency: ProductDependency {
 	init(_ productRepository: ProductRepository) {
 		self.productRepository = productRepository
 	}

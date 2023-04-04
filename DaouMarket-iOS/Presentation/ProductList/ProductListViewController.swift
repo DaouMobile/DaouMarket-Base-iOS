@@ -77,6 +77,7 @@ final class ProductListViewController: UIViewController {
 		navigationItem.title = "Daou Store"
 		navigationItem.hidesSearchBarWhenScrolling = false
 		navigationItem.largeTitleDisplayMode = .always
+		navigationItem.backButtonTitle = ""
 	}
 
 	private func applySnapshot(_ viewData: [Product]) {
@@ -92,6 +93,8 @@ extension ProductListViewController: UICollectionViewDelegate {
 		guard let product = dataSource.snapshot().itemIdentifiers[safe: indexPath.row] else {
 			return
 		}
-		// TODO: 상세 ViewController 생성 후 이동
+		let viewController: ProductDetailViewController = .init(product: product)
+		viewController.modalPresentationStyle = .fullScreen
+		navigationController?.pushViewController(viewController, animated: true)
 	}
 }
