@@ -11,5 +11,9 @@ final class DataAssembly: Assembly {
 			)
 			return session
 		}.inObjectScope(.container)
+
+		container.register(ProductRepository.self) { _ in
+			return DefaultProductRepository()
+		}.inObjectScope(.container)
 	}
 }

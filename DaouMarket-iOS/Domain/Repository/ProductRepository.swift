@@ -1,12 +1,12 @@
 import Combine
 
 protocol ProductRepository {
-	func getProducts(page: Int, size: Int) -> AnyPublisher<[Product], Error>
+	func getProducts(page: Int) -> AnyPublisher<[Product], Error>
 }
 
 extension ProductRepository {
-	func getProducts(page: Int, size: Int = 20) -> AnyPublisher<[Product], Error> {
-		return getProducts(page: page, size: size)
+	func getProducts(page: Int = 0) -> AnyPublisher<[Product], Error> {
+		return getProducts(page: page)
 	}
 }
 
