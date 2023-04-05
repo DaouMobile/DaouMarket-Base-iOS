@@ -72,7 +72,7 @@ final class ProductListCollectionViewCell: UICollectionViewCell {
 		}
 		brandLabel.text = viewData.brand
 		contentLabel.text = viewData.content
-		priceLabel.text = String(viewData.price)
+		priceLabel.text = viewData.price.formatNumber()
 	}
 
 	private func initView() {

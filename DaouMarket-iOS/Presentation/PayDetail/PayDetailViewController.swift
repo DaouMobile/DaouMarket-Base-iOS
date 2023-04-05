@@ -7,7 +7,7 @@ final class PayDetailViewController: UIViewController {
 		super.init(nibName: nil, bundle: nil)
 		initViews()
 		bind()
-		setupSearchBarController()
+		setupNavigationBar()
 	}
 	required init?(coder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
@@ -132,7 +132,7 @@ final class PayDetailViewController: UIViewController {
 
 		let payInfoLabel: UILabel = .init()
 		payInfoLabel.set(
-			text: "총 \(viewModel.totalCount)개 \(viewModel.totalPrice)원",
+			text: "총 \(viewModel.totalCount)개 \(viewModel.totalPrice.formatNumber())",
 			font: .systemFont(ofSize: 18, weight: .medium),
 			textColor: .cyan
 		)
@@ -285,18 +285,21 @@ final class PayDetailViewController: UIViewController {
 			.flatMap({ _ -> AnyPublisher<OrderResult, Error> in
 				return self.viewModel.order()
 			})
+			.receive(on: DispatchQueue.main)
 			.sink(
 				receiveCompletion: { (error) in
 					print(error)
 				},
 				receiveValue: { [weak self] (orderResult) in
-					// TODO: 결제 완료 화면이동
+					let viewController: OrderResultViewController = .init(orderResult: orderResult)
+					viewController.modalPresentationStyle = .fullScreen
+					self?.navigationController?.pushViewController(viewController, animated: true)
 				}
 			)
 			.store(in: &cancellables)
 	}
 
-	private func setupSearchBarController() {
+	private func 		setupNavigationBar() {
 		navigationItem.title = "Daou Store"
 		navigationItem.hidesSearchBarWhenScrolling = false
 		navigationItem.largeTitleDisplayMode = .never

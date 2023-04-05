@@ -55,6 +55,10 @@
 		EAB4DE7029DCFBF6000ADB56 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB4DE6F29DCFBF6000ADB56 /* Order.swift */; };
 		EAB4DE7229DCFED5000ADB56 /* Encodable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB4DE7129DCFED5000ADB56 /* Encodable+.swift */; };
 		EAB4DE7429DCFFBC000ADB56 /* OrderResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB4DE7329DCFFBC000ADB56 /* OrderResponse.swift */; };
+		EAB4DE7729DD0F72000ADB56 /* OrderResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB4DE7629DD0F72000ADB56 /* OrderResultViewController.swift */; };
+		EAB4DE7929DD11A3000ADB56 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB4DE7829DD11A3000ADB56 /* Date+.swift */; };
+		EAB4DE7B29DD2D96000ADB56 /* Int+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB4DE7A29DD2D96000ADB56 /* Int+.swift */; };
+		EAB4DE7D29DD3035000ADB56 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB4DE7C29DD3035000ADB56 /* String+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +108,10 @@
 		EAB4DE6F29DCFBF6000ADB56 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		EAB4DE7129DCFED5000ADB56 /* Encodable+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+.swift"; sourceTree = "<group>"; };
 		EAB4DE7329DCFFBC000ADB56 /* OrderResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderResponse.swift; sourceTree = "<group>"; };
+		EAB4DE7629DD0F72000ADB56 /* OrderResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderResultViewController.swift; sourceTree = "<group>"; };
+		EAB4DE7829DD11A3000ADB56 /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
+		EAB4DE7A29DD2D96000ADB56 /* Int+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+.swift"; sourceTree = "<group>"; };
+		EAB4DE7C29DD3035000ADB56 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				EA3A18E829DBE55600A185D3 /* UIView+.swift */,
+				EAB4DE7C29DD3035000ADB56 /* String+.swift */,
 				EA3A18EA29DBE5C300A185D3 /* UIStackView+.swift */,
 				EA3A18EF29DBE66200A185D3 /* UILabel+.swift */,
 				EA3A18F829DBE97900A185D3 /* UIImageView+.swift */,
@@ -182,6 +191,8 @@
 				EA3A191B29DC362F00A185D3 /* Publisher+UIControl.swift */,
 				EA3A191D29DC365B00A185D3 /* UITextField+.swift */,
 				EAB4DE7129DCFED5000ADB56 /* Encodable+.swift */,
+				EAB4DE7829DD11A3000ADB56 /* Date+.swift */,
+				EAB4DE7A29DD2D96000ADB56 /* Int+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -280,6 +291,7 @@
 		EA3C9B2A29DBA83500482733 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				EAB4DE7529DD0F64000ADB56 /* OrderResult */,
 				EA3A191429DC29F200A185D3 /* PayDetail */,
 				EA3A18FF29DBFAD800A185D3 /* ProductDetail */,
 				EA3A18D029DBBB3500A185D3 /* ProductList */,
@@ -323,6 +335,14 @@
 				EAB4DE6F29DCFBF6000ADB56 /* Order.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		EAB4DE7529DD0F64000ADB56 /* OrderResult */ = {
+			isa = PBXGroup;
+			children = (
+				EAB4DE7629DD0F72000ADB56 /* OrderResultViewController.swift */,
+			);
+			path = OrderResult;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -419,9 +439,11 @@
 				EA3A18EB29DBE5C300A185D3 /* UIStackView+.swift in Sources */,
 				EA3A191A29DC344600A185D3 /* PayDetailViewModel.swift in Sources */,
 				EA3A191E29DC365B00A185D3 /* UITextField+.swift in Sources */,
+				EAB4DE7929DD11A3000ADB56 /* Date+.swift in Sources */,
 				EA3C9B4029DBB03500482733 /* DataAssembly.swift in Sources */,
 				EA3A191C29DC362F00A185D3 /* Publisher+UIControl.swift in Sources */,
 				EA3C9B3E29DBB01700482733 /* DIContainer.swift in Sources */,
+				EAB4DE7B29DD2D96000ADB56 /* Int+.swift in Sources */,
 				EA3A190829DC047500A185D3 /* Publisher+Gesture.swift in Sources */,
 				EA3A190129DBFB6C00A185D3 /* ProductDetailViewController.swift in Sources */,
 				EA3A18FE29DBF94B00A185D3 /* Array+.swift in Sources */,
@@ -443,7 +465,9 @@
 				EA3A18CD29DBB58900A185D3 /* DefaultProductRepository.swift in Sources */,
 				EA3A191329DC19DC00A185D3 /* UIColor+.swift in Sources */,
 				EA3A18D829DBC0FD00A185D3 /* ProductListViewModel.swift in Sources */,
+				EAB4DE7D29DD3035000ADB56 /* String+.swift in Sources */,
 				EA3A190629DBFDAC00A185D3 /* ButtonWidgetView.swift in Sources */,
+				EAB4DE7729DD0F72000ADB56 /* OrderResultViewController.swift in Sources */,
 				EA3A18E129DBE28D00A185D3 /* ProductListCollectionViewLayout.swift in Sources */,
 				EA3A18E329DBE29A00A185D3 /* ProductListCollectionViewCell.swift in Sources */,
 				EAB4DE7029DCFBF6000ADB56 /* Order.swift in Sources */,
@@ -595,7 +619,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FJHLD62USU;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "DaouMarket-iOS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -624,7 +648,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FJHLD62USU;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "DaouMarket-iOS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

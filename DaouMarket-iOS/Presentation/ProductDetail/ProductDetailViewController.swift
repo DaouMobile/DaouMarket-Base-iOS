@@ -16,7 +16,7 @@ final class ProductDetailViewController: UIViewController {
 		setup(product)
 		initViews()
 		bind()
-		setupSearchBarController()
+		setupNavigationBar()
 	}
 
 	private var cancellables: Set<AnyCancellable> = .init()
@@ -136,7 +136,7 @@ final class ProductDetailViewController: UIViewController {
 			.store(in: &cancellables)
 	}
 
-	private func setupSearchBarController() {
+	private func 		setupNavigationBar() {
 		navigationItem.title = "Daou Store"
 		navigationItem.hidesSearchBarWhenScrolling = false
 		navigationItem.largeTitleDisplayMode = .always
@@ -149,6 +149,6 @@ final class ProductDetailViewController: UIViewController {
 		}
 		brandLabel.text = product.brand
 		contentLabel.text = product.content
-		priceLabel.text = String(product.price)
+		priceLabel.text = product.price.formatNumber()
 	}
 }

@@ -158,7 +158,7 @@ final class ProductDetailBottomSheetViewController: UIViewController {
 
 	func setup(name: String, price: Int) {
 		nameLabel.text = name
-		productPriceLabel.text = "\(price) 원"
+		productPriceLabel.text = price.formatNumber()
 		totalProductsCountLabel.text = "총 수량 \(1) 개"
 	}
 
@@ -224,7 +224,7 @@ final class ProductDetailBottomSheetViewController: UIViewController {
 			make.height.equalTo(56)
 			make.top.equalTo(totalProductsPriceLabel.snp.bottom).offset(16)
 			make.horizontalEdges.equalToSuperview().inset(16)
-			make.bottom.equalToSuperview().offset(-16)
+			make.bottom.equalToSuperview().offset(-34)
 		}
 	}
 
@@ -248,7 +248,7 @@ final class ProductDetailBottomSheetViewController: UIViewController {
 		totalPrice
 			.sink(receiveValue: { [weak self] (price) in
 				guard let self else { return }
-				self.totalProductsPriceLabel.text = "\(price) 원"
+				self.totalProductsPriceLabel.text = price.formatNumber()
 			})
 			.store(in: &cancellables)
 
