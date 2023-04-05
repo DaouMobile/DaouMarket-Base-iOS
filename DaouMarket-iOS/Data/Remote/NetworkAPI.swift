@@ -35,7 +35,6 @@ public extension NetworkAPI {
 					throw error
 				}
 				if let value = response.value {
-					print("response: \(value)")
 					return value
 				} else {
 					throw APIError.responseValueIsNil

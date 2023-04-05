@@ -55,7 +55,6 @@ enum ProductNetworkAPI: NetworkAPI {
 				guard let dictionary = order.toDictionary else {
 					return [:]
 				}
-				print("request body dictionary: \(dictionary)")
 				return dictionary
 		}
 	}
