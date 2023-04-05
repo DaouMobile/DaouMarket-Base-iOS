@@ -8,6 +8,7 @@ public protocol NetworkAPI {
 	var path: String { get }
 	var method: HTTPMethod { get}
 	var headers: HTTPHeaders { get }
+	var queries: [URLQueryItem] { get }
 	var parameters: Parameters { get }
 	var baseURL: URL? { get }
 	var description: String { get }
@@ -19,10 +20,11 @@ public extension NetworkAPI {
 		decoder: JSONDecoder = JSONDecoder()
 	) -> AnyPublisher<Response, Error>
 	{
-		guard let url = baseURL?.appendingPathComponent(path) else {
+		guard var url = baseURL?.appendingPathComponent(path) else {
 			return Fail(error: AFError.invalidURL(url: description))
 				.eraseToAnyPublisher()
 		}
+		url.append(queryItems: queries)
 
 		let session: Session = get()
 		return session.request(url, method: method, parameters: parameters, encoding: encoding, headers: headers)

@@ -124,7 +124,7 @@ final class ProductDetailViewController: UIViewController {
 					name: self.product.name,
 					price: self.product.price,
 					completion: { (totalCount, totalPrice) in
-						let viewModel: PayDetailViewModel = .init(totalCount: totalCount, totalPrice: totalPrice, dependency: get())
+						let viewModel: PayDetailViewModel = .init(totalCount: totalCount, totalPrice: totalPrice, products: [self.product], dependency: get())
 						let viewController: PayDetailViewController = .init(viewModel: viewModel)
 						viewController.modalPresentationStyle = .fullScreen
 						self.navigationController?.pushViewController(viewController, animated: true)

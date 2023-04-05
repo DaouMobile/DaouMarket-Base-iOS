@@ -53,7 +53,7 @@ final class PayDetailViewController: UIViewController {
 
 	private let receiverPhoneNumberTextField: CustomTextField = .init()
 
-	private let locationTitleLabel: UILabel = {
+	private let addressTitleLabel: UILabel = {
 		let label: UILabel = .init()
 		label.set(
 			text: "배송지",
@@ -64,10 +64,10 @@ final class PayDetailViewController: UIViewController {
 		return label
 	}()
 
-	private let locationContentLabel: UILabel = {
+	private lazy var addressContentLabel: UILabel = {
 		let label: UILabel = .init()
 		label.set(
-			text: "(16878) 경기도 용인시 수지구 디지털밸리로 81",
+			text: viewModel.receiverAddress,
 			font: .systemFont(ofSize: 16, weight: .regular),
 			textColor: .black
 		)
@@ -184,25 +184,25 @@ final class PayDetailViewController: UIViewController {
 			make.trailing.equalToSuperview().offset(-16)
 		}
 
-		view.addSubview(locationTitleLabel)
-		locationTitleLabel.snp.makeConstraints { make in
+		view.addSubview(addressTitleLabel)
+		addressTitleLabel.snp.makeConstraints { make in
 			make.width.equalTo(60)
 			make.top.equalTo(receiverPhoneNumberTitleLabel.snp.bottom).offset(16)
 			make.leading.equalToSuperview().offset(16)
 		}
 
-		view.addSubview(locationContentLabel)
-		locationContentLabel.snp.makeConstraints { make in
+		view.addSubview(addressContentLabel)
+		addressContentLabel.snp.makeConstraints { make in
 			make.height.equalTo(36)
-			make.centerY.equalTo(locationTitleLabel.snp.centerY)
-			make.leading.equalTo(locationTitleLabel.snp.trailing).offset(16)
+			make.centerY.equalTo(addressTitleLabel.snp.centerY)
+			make.leading.equalTo(addressTitleLabel.snp.trailing).offset(16)
 			make.trailing.equalToSuperview().offset(-16)
 		}
 
 		view.addSubview(requestLabel)
 		requestLabel.snp.makeConstraints { make in
 			make.width.equalTo(60)
-			make.top.equalTo(locationContentLabel.snp.bottom).offset(16)
+			make.top.equalTo(addressContentLabel.snp.bottom).offset(16)
 			make.leading.equalToSuperview().offset(16)
 		}
 
@@ -275,11 +275,31 @@ final class PayDetailViewController: UIViewController {
 			.compactMap({ $0 })
 			.sink(receiveValue: viewModel.setOrdererPhoneNumber(_:))
 			.store(in: &cancellables)
+
+		requestTextField.textPublisher
+			.compactMap({ $0 })
+			.sink(receiveValue: viewModel.setRequestForDelivery(_:))
+			.store(in: &cancellables)
+
+		confirmButtonWidgetView.tapEventPublisher()
+			.flatMap({ _ -> AnyPublisher<OrderResult, Error> in
+				return self.viewModel.order()
+			})
+			.sink(
+				receiveCompletion: { (error) in
+					print(error)
+				},
+				receiveValue: { [weak self] (orderResult) in
+					// TODO: 결제 완료 화면이동
+				}
+			)
+			.store(in: &cancellables)
 	}
 
 	private func setupSearchBarController() {
 		navigationItem.title = "Daou Store"
 		navigationItem.hidesSearchBarWhenScrolling = false
-		navigationItem.largeTitleDisplayMode = .always
+		navigationItem.largeTitleDisplayMode = .never
+		navigationItem.backButtonDisplayMode = .minimal
 	}
 }

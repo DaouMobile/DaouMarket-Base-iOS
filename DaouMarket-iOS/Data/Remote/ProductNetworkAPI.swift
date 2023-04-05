@@ -3,7 +3,7 @@ import Alamofire
 
 enum ProductNetworkAPI: NetworkAPI {
 	case getProducts(page: Int, size: Int)
-	case postOrder(customerID: Int)
+	case postOrder(order: OrderRequest)
 
 	var scheme: String {
 		return "http"
@@ -32,7 +32,16 @@ enum ProductNetworkAPI: NetworkAPI {
 	}
 
 	var headers: HTTPHeaders {
-		return .default
+		return ["Content-Type": "application/json"]
+	}
+
+	var queries: [URLQueryItem] {
+		switch self {
+			case .postOrder:
+				return [.init(name: "customerId", value: "daouKim")]
+			default:
+				return []
+		}
 	}
 
 	var parameters: Parameters {
@@ -42,8 +51,12 @@ enum ProductNetworkAPI: NetworkAPI {
 					"page": page,
 					"size": size
 				]
-			default:
-				return [:]
+			case .postOrder(let order):
+				guard let dictionary = order.toDictionary else {
+					return [:]
+				}
+				print("request body dictionary: \(dictionary)")
+				return dictionary
 		}
 	}
 

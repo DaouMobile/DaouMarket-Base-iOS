@@ -52,6 +52,9 @@
 		EA3C9B4229DBB12000482733 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C9B4129DBB12000482733 /* APIError.swift */; };
 		EA3C9B4429DBB17B00482733 /* ProductPageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C9B4329DBB17B00482733 /* ProductPageResponse.swift */; };
 		EA3C9B4729DBB25400482733 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C9B4629DBB25400482733 /* Product.swift */; };
+		EAB4DE7029DCFBF6000ADB56 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB4DE6F29DCFBF6000ADB56 /* Order.swift */; };
+		EAB4DE7229DCFED5000ADB56 /* Encodable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB4DE7129DCFED5000ADB56 /* Encodable+.swift */; };
+		EAB4DE7429DCFFBC000ADB56 /* OrderResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB4DE7329DCFFBC000ADB56 /* OrderResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +101,9 @@
 		EA3C9B4129DBB12000482733 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		EA3C9B4329DBB17B00482733 /* ProductPageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPageResponse.swift; sourceTree = "<group>"; };
 		EA3C9B4629DBB25400482733 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		EAB4DE6F29DCFBF6000ADB56 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		EAB4DE7129DCFED5000ADB56 /* Encodable+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+.swift"; sourceTree = "<group>"; };
+		EAB4DE7329DCFFBC000ADB56 /* OrderResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +181,7 @@
 				EA3A191229DC19DC00A185D3 /* UIColor+.swift */,
 				EA3A191B29DC362F00A185D3 /* Publisher+UIControl.swift */,
 				EA3A191D29DC365B00A185D3 /* UITextField+.swift */,
+				EAB4DE7129DCFED5000ADB56 /* Encodable+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -296,6 +303,7 @@
 			isa = PBXGroup;
 			children = (
 				EA3C9B4329DBB17B00482733 /* ProductPageResponse.swift */,
+				EAB4DE7329DCFFBC000ADB56 /* OrderResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -312,6 +320,7 @@
 			isa = PBXGroup;
 			children = (
 				EA3C9B4629DBB25400482733 /* Product.swift */,
+				EAB4DE6F29DCFBF6000ADB56 /* Order.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -403,6 +412,7 @@
 				EA3A18D229DBBB4500A185D3 /* ProductListViewController.swift in Sources */,
 				EA3A191129DC09DE00A185D3 /* ProductDetailBottomSheetViewController.swift in Sources */,
 				EA3C9B1529DBA79000482733 /* AppDelegate.swift in Sources */,
+				EAB4DE7429DCFFBC000ADB56 /* OrderResponse.swift in Sources */,
 				EA3C9B1729DBA79000482733 /* SceneDelegate.swift in Sources */,
 				EA3A18CF29DBB5C000A185D3 /* ProductNetworkAPI.swift in Sources */,
 				EA3A18E529DBE2EF00A185D3 /* ProductListKindsOfSection.swift in Sources */,
@@ -417,6 +427,7 @@
 				EA3A18FE29DBF94B00A185D3 /* Array+.swift in Sources */,
 				EA3A18DE29DBC16D00A185D3 /* PresentationAssembly.swift in Sources */,
 				EA3A191829DC301C00A185D3 /* CustomTextField.swift in Sources */,
+				EAB4DE7229DCFED5000ADB56 /* Encodable+.swift in Sources */,
 				EA3A191629DC2A0600A185D3 /* PayDetailViewController.swift in Sources */,
 				EA3A18FC29DBF4A900A185D3 /* SearchBarController.swift in Sources */,
 				EA3A190A29DC04D300A185D3 /* UIButton+.swift in Sources */,
@@ -435,6 +446,7 @@
 				EA3A190629DBFDAC00A185D3 /* ButtonWidgetView.swift in Sources */,
 				EA3A18E129DBE28D00A185D3 /* ProductListCollectionViewLayout.swift in Sources */,
 				EA3A18E329DBE29A00A185D3 /* ProductListCollectionViewCell.swift in Sources */,
+				EAB4DE7029DCFBF6000ADB56 /* Order.swift in Sources */,
 				EA3A18D629DBBF5700A185D3 /* RepositoryError.swift in Sources */,
 				EA3A18E929DBE55600A185D3 /* UIView+.swift in Sources */,
 			);
